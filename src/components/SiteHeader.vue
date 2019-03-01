@@ -29,7 +29,7 @@ computed: {
 
 <style>
 .masthead{
-    background: linear-gradient(to right, rgba(13, 231, 180, 0.651), rgba(218, 137, 200, 0.747)), url('/images/mount.png')!important;
+    background: linear-gradient(to right, rgba(13, 231, 180, 0.651), rgba(218, 137, 200, 0.747));
     -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 53%, 100% 77%, 25% 100%, 0% 80%, 0 0%);
     clip-path: polygon(50% 0%, 100% 0, 100% 53%, 100% 77%, 25% 100%, 0% 80%, 0 0%);
 }
