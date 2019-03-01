@@ -1,0 +1,31 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - label: "News"
+    name: "news"
+    editor:
+      preview: false
+    folder: "news"
+    create: true
+    identifier_field: name
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Sub Title", name: "subtitle", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        default: tutorial
+        options:
+          - {label: "Tutorial", value: "tutorial"}
+          - {label: "Interview", value: "interview"}
+          - {label: "Announcement", value: "announcement"}
+          - {label: "Review", value: "review"}
+      - {label: "Author", name: "author", widget: "string"}
