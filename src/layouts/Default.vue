@@ -6,7 +6,7 @@
     <site-footer />
 
 
-    <main>
+    <main class="Container">
     <slot/>
     </main>
 

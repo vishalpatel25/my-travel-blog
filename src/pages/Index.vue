@@ -3,7 +3,9 @@
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
 
-        <post-preview />
+        <post-preview
+        v-for="edge in $page.news.edges" :key="edge.id" :item="edge.node"
+         />
 
       </div>
     </div>
@@ -29,3 +31,22 @@ export default {
   margin-right: 1rem;
 }
 </style>
+
+<page-query>
+query News {
+  news: allNews {
+    edges {
+      node {
+        title
+        subtitle
+        path
+        date
+        thumbnail
+      }
+    }
+  }
+}
+</page-query>
+
+
+

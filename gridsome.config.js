@@ -6,6 +6,25 @@
 
 module.exports = {
   siteName: 'Solo Adventure',
-  siteSubtitle: 'Never Stop Exploring',
-  plugins: []
+
+  transformers: {
+    remark: {
+      externalLinksTarget: '_blank',
+      externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+      anchorClassName: 'icon icon-link',
+      plugins: [
+        // ...global plugins
+      ]
+    }
+  },
+  plugins: [
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'news/*.md',
+        typeName: 'News',
+        route: '/:slug'
+      }
+    }
+  ]
 }
